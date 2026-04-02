@@ -1,0 +1,102 @@
+/* Основні налаштування */
+.nexora-container {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Секції */
+.nexora-section {
+    margin-bottom: 40px;
+    background: #111;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #222;
+}
+
+.nexora-title {
+    color: #ff6600; /* Помаранчевий як на фото */
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Таблиці */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.nexora-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.nexora-table th {
+    text-align: left;
+    color: #666;
+    padding: 12px;
+    border-bottom: 2px solid #333;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.nexora-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #222;
+    line-height: 1.5;
+}
+
+/* Акценти та бейджі */
+.text-orange { color: #ff6600; font-weight: bold; }
+.text-green { color: #4caf50; font-weight: bold; font-size: 18px; }
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.badge-low { background: #1b2e1b; color: #4caf50; }
+.badge-mid { background: #2e281b; color: #ffcc00; }
+.badge-high { background: #2e1b1b; color: #f44336; }
+.badge-expert { background: #1b1e2e; color: #2196f3; }
+
+.nexora-footer-text {
+    color: #666;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* Адаптація під мобільні телефони */
+@media (max-width: 600px) {
+    .nexora-table thead { display: none; } /* Приховуємо шапку на моб */
+    
+    .nexora-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .nexora-table td {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        padding: 8px 5px;
+        text-align: right;
+    }
+
+    .nexora-table td::before {
+        content: attr(data-label); /* Додаємо назву колонки з HTML */
+        color: #ff6600;
+        font-weight: bold;
+        text-align: left;
+        margin-right: 10px;
+    }
+}
