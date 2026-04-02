@@ -204,11 +204,21 @@
             <p style="color: #666; line-height: 1.6;">Ми завжди раді новим знайомствам. Просто заповни форму праворуч.</p>
         </div>
         <div class="input-group">
-            <input type="text" placeholder="Твоє ім'я">
-            <input type="email" placeholder="Твій Email">
-            <textarea rows="4" placeholder="Твоє повідомлення..."></textarea>
-            <button>Надіслати 🚀</button>
-        </div>
+            <div class="input-group">
+    <!-- 1. Добавляем тег form. Замените "ваш_email@example.com" на свою почту -->
+    <form action="https://formspree.io/f/xqegdnya" method="POST">
+        
+        <!-- 2. Добавляем атрибут name каждому полю (обязательно для работы) -->
+        <input type="text" name="name" placeholder="Твоє ім'я" required>
+        
+        <input type="email" name="email" placeholder="Твій Email" required>
+        
+        <textarea name="message" rows="4" placeholder="Твоє повідомлення..." required></textarea>
+        
+        <!-- 3. Кнопка должна иметь тип submit -->
+        <button type="submit">Надіслати 🚀</button>
+    </form>
+            </div>
     </div>
 </div>
 
